@@ -2,14 +2,12 @@ const { Client, MessageEmbed } = require("discord.js");
 const client = new Client();
 
 client.on("ready", () => {
-  client.user.setActivity("bot en heroku", { type: "WATCHING" });
   console.log("Tamo");
 });
 
 let prefix = process.env.PREFIX;
 
 client.on("message", async (message) => {
-  if (!message.content.startsWith(prefix) || !message.guild) return;
   if (message.author.bot) return;
 
   if (

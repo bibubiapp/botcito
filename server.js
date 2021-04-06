@@ -41,7 +41,9 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("luis".toUpperCase())) {
-    message.channel.send("Luissss grande mi pana! 💪🏼");
+    if (message.author != "829051360183976046") {
+      message.channel.send("Luissss grande mi pana! 💪🏼");
+    }
   }
 
   if (

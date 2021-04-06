@@ -2,10 +2,16 @@ const { Client, MessageEmbed } = require("discord.js");
 const client = new Client();
 
 client.on("ready", () => {
+  client.user.setActivity("bot en heroku", { type: "WATCHING" });
   console.log("Tamo");
 });
 
-client.on("message", (message) => {
+let prefix = process.env.PREFIX;
+
+client.on("message", async (message) => {
+  if (!message.content.startsWith(prefix) || !message.guild) return;
+  if (message.author.bot) return;
+
   if (
     message.content.toUpperCase().includes("puto".toUpperCase()) ||
     message.content.toUpperCase().includes("puta".toUpperCase()) ||
@@ -70,6 +76,12 @@ client.on("message", (message) => {
     if (message.author != "829051360183976046") {
       message.channel.send("Ay Santi, TODOS AMAMOS A SANTI ❤️");
     }
+  }
+
+  if (message.content === "!borraTodoPuto") {
+    const fetched = await message.channel.fetchMessages({ limit: 100 });
+    message.channel.bulkDelete(fetched);
+    console.log("Mensajes eliminados");
   }
 
   if (

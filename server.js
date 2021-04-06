@@ -8,7 +8,7 @@ client.on("ready", () => {
 let prefix = process.env.PREFIX;
 
 client.on("message", async (message) => {
-  if (message.author.bot) return;
+  // if (message.author.bot) return;
 
   if (
     message.content.toUpperCase().includes("puto".toUpperCase()) ||
@@ -38,6 +38,16 @@ client.on("message", async (message) => {
 
   if (message.content.toUpperCase().includes("rompis".toUpperCase())) {
     message.reply("SANTI NO ROMPIÓ NADA, CALMATE");
+  }
+
+  if (message.content.toUpperCase().includes("luis".toUpperCase())) {
+    message.channel.send("Luissss grande mi pana! 💪🏼");
+  }
+
+  if (
+    message.content.toUpperCase().includes("acabas de avanzar al".toUpperCase())
+  ) {
+    message.channel.send("EAAAA leveleando faaaaerteeeeee! 💪🏼🏆");
   }
 
   if (message.content.toUpperCase().includes("php".toUpperCase())) {

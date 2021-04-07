@@ -71,10 +71,10 @@ client.on("message", async (message) => {
   }
 
   if (
-    message.content.toUpperCase().includes("github".toUpperCase()) &&
-    message.content
-      .toUpperCase()
-      .includes("cambiar".toUpperCase() || "cambio".toUpperCase()) &&
+    (message.content.toUpperCase().includes("github".toUpperCase()) ||
+      message.content.toUpperCase().includes("git".toUpperCase())) &&
+    (message.content.toUpperCase().includes("cambiar".toUpperCase()) ||
+      message.content.toUpperCase().includes("cambio".toUpperCase())) &&
     message.content.toUpperCase().includes("rama".toUpperCase())
   ) {
     if (message.author != "829051360183976046") {

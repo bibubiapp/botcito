@@ -71,13 +71,11 @@ client.on("message", async (message) => {
   }
 
   if (
+    message.content.toUpperCase().includes("github".toUpperCase()) &&
     message.content
       .toUpperCase()
-      .includes(
-        "github".toUpperCase() &&
-          "cambiar".toUpperCase() &&
-          "rama".toUpperCase()
-      )
+      .includes("cambiar".toUpperCase() || "cambio".toUpperCase()) &&
+    message.content.toUpperCase().includes("rama".toUpperCase())
   ) {
     if (message.author != "829051360183976046") {
       message.channel.send(

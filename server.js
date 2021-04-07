@@ -71,6 +71,22 @@ client.on("message", async (message) => {
   }
 
   if (
+    message.content
+      .toUpperCase()
+      .includes(
+        "github".toUpperCase() &&
+          "cambiar".toUpperCase() &&
+          "rama".toUpperCase()
+      )
+  ) {
+    if (message.author != "829051360183976046") {
+      message.channel.send(
+        "Para cambiar de rama en github tenés que ponerte a estudiar un poco soquete :)"
+      );
+    }
+  }
+
+  if (
     message.content.toUpperCase().includes("facu".toUpperCase()) ||
     message.content.toUpperCase().includes("citio".toUpperCase())
   ) {
@@ -89,7 +105,7 @@ client.on("message", async (message) => {
   }
 
   if (message.content === "!borraTodoPuto") {
-    const fetched = await message.channel.fetchMessages({ limit: 100 });
+    const fetched = await message.channel.messages.fetch({ limit: 100 });
     message.channel.bulkDelete(fetched);
     console.log("Mensajes eliminados");
   }

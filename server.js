@@ -97,12 +97,26 @@ client.on("message", async (message) => {
   }
 
   if (
-    message.content.toUpperCase().includes("tiburonc".toUpperCase()) ||
-    message.content.toUpperCase().includes("tiburons".toUpperCase())
+    message.content.toUpperCase().includes("#teamtiburoncin".toUpperCase()) ||
+    message.content.toUpperCase().includes("team tiburoncin".toUpperCase())
   ) {
     if (message.author != "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
-      message.reply("Tiburoncin? UH HA HA 🦈");
+      message.reply(
+        "Vamo che! Aguante el #TeamTiburoncin 🦈 ponete un nombre como la gente bot de NUCBA"
+      );
+    }
+  }
+
+  if (
+    message.content.toUpperCase().includes("#teamnucba".toUpperCase()) ||
+    message.content.toUpperCase().includes("team nucba".toUpperCase())
+  ) {
+    if (message.author != "829051360183976046") {
+      //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
+      message.reply(
+        "#TeamNucba mercenarios, ponete un nombre como la gente Bot de NUCBA. #TeamTiburoncin PRESENTE!"
+      );
     }
   }
 

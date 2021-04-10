@@ -96,6 +96,28 @@ client.on("message", async (message) => {
     }
   }
 
+  if (
+    message.content.toUpperCase().includes("tiburonc".toUpperCase()) ||
+    message.content.toUpperCase().includes("tiburons".toUpperCase())
+  ) {
+    if (message.author != "829051360183976046") {
+      //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
+      message.reply("Tiburoncin? UH HA HA 🦈");
+    }
+  }
+
+  if (
+    message.content.toUpperCase().includes("quien es tiburonc".toUpperCase()) ||
+    message.content.toUpperCase().includes("es tiburon".toUpperCase())
+  ) {
+    if (message.author != "829051360183976046") {
+      //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
+      message.reply(
+        "Hola soy Tiburoncin! El más mejor bot de todos y guardaespaldas personal de Santi 🦈 haganme caso o moriré"
+      );
+    }
+  }
+
   if (message.content.toUpperCase().includes("santi".toUpperCase())) {
     if (message.author != "829051360183976046") {
       message.channel.send("Ay Santi, TODOS AMAMOS A SANTI ❤️");

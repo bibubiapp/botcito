@@ -12,7 +12,7 @@ client.on("message", async (message) => {
 
   if (
     message.content.toUpperCase().includes("puto".toUpperCase()) ||
-    message.content.toUpperCase().includes("puta".toUpperCase()) ||
+    message.content.toUpperCase().includes(" puta".toUpperCase()) ||
     message.content.toUpperCase().includes("hdp".toUpperCase()) ||
     message.content.toUpperCase().includes("trolo".toUpperCase()) ||
     message.content.toUpperCase().includes("culia".toUpperCase()) ||
@@ -27,30 +27,24 @@ client.on("message", async (message) => {
     message.reply("EU, LAS PALABRITAS EH");
   }
 
-  if (
-    message.content.toUpperCase().includes("lucho".toUpperCase()) ||
-    message.content.toUpperCase().includes("lucian".toUpperCase())
-  ) {
-    if (message.author != "829051360183976046") {
-      message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
-    }
-  }
+  // if (
+  //   message.content.toUpperCase().includes("lucho".toUpperCase()) ||
+  //   message.content.toUpperCase().includes("lucian".toUpperCase())
+  // ) {
+  //   if (message.author != "829051360183976046") {
+  //     message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
+  //   }
+  // }
 
   if (message.content.toUpperCase().includes("rompis".toUpperCase())) {
     message.reply("SANTI NO ROMPIÓ NADA, CALMATE");
   }
 
-  if (message.content.toUpperCase().includes("luis".toUpperCase())) {
-    if (message.author != "829051360183976046") {
-      message.channel.send("Luissss grande mi pana! 💪🏼");
-    }
-  }
-
-  if (
-    message.content.toUpperCase().includes("acabas de avanzar al".toUpperCase())
-  ) {
-    message.channel.send("EAAAA leveleando faaaaerteeeeee! 💪🏼🏆");
-  }
+  // if (message.content.toUpperCase().includes("luis".toUpperCase())) {
+  //   if (message.author != "829051360183976046") {
+  //     message.channel.send("Luissss grande mi pana! 💪🏼");
+  //   }
+  // }
 
   if (message.content.toUpperCase().includes("php".toUpperCase())) {
     if (message.author != "829051360183976046") {
@@ -84,17 +78,17 @@ client.on("message", async (message) => {
     }
   }
 
-  if (
-    message.content.toUpperCase().includes("facu".toUpperCase()) ||
-    message.content.toUpperCase().includes("citio".toUpperCase())
-  ) {
-    if (message.author != "829051360183976046") {
-      //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
-      message.reply(
-        "EL CITIOU! EL CITIOU LLEGA TARDE A UNA ENTREVISTA VIRTUAL"
-      );
-    }
-  }
+  // if (
+  //   message.content.toUpperCase().includes("facu".toUpperCase()) ||
+  //   message.content.toUpperCase().includes("citio".toUpperCase())
+  // ) {
+  //   if (message.author != "829051360183976046") {
+  //     //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
+  //     message.reply(
+  //       "EL CITIOU! EL CITIOU LLEGA TARDE A UNA ENTREVISTA VIRTUAL"
+  //     );
+  //   }
+  // }
 
   if (
     message.content.toUpperCase().includes("#teamtiburoncin".toUpperCase()) ||
@@ -134,7 +128,9 @@ client.on("message", async (message) => {
 
   if (message.content.toUpperCase().includes("santi".toUpperCase())) {
     if (message.author != "829051360183976046") {
-      message.channel.send("Ay Santi, TODOS AMAMOS A SANTI ❤️");
+      message.channel.send(
+        "Santi, te llaman hermano... aparecé dejá de comer Oreos"
+      );
     }
   }
 
@@ -145,7 +141,6 @@ client.on("message", async (message) => {
   }
 
   if (
-    message.content.toUpperCase().includes("js".toUpperCase()) ||
     message.content.toUpperCase().includes("shavascr".toUpperCase()) ||
     message.content.toUpperCase().includes("javascript".toUpperCase())
   ) {

@@ -266,9 +266,6 @@ const docuArray = [
   },
 ];
 
-const randomNumber = Math.floor(Math.random() * docuArray.length + 1);
-const randomDocu = docuArray[randomNumber];
-
 client.on("message", async (message) => {
   // if (message.author.bot) return;
 
@@ -400,6 +397,9 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("!adel".toUpperCase())) {
+    const randomNumber = Math.floor(Math.random() * docuArray.length + 1);
+    const randomDocu = docuArray[randomNumber];
+
     const embed = new MessageEmbed()
       .setTitle("Dijeron DOCUMENTACIÓN?")
       .setColor("#FF00A2")

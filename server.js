@@ -296,7 +296,7 @@ client.on("message", async (message) => {
   //   message.content.toUpperCase().includes("lucho".toUpperCase()) ||
   //   message.content.toUpperCase().includes("lucian".toUpperCase())
   // ) {
-  //   if (message.author != "638514826884153356") {
+  //   if (message.author != "966782901037453383") {
   //     message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
   //   }
   // }
@@ -306,19 +306,19 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("php".toUpperCase())) {
-    if (message.author != "638514826884153356") {
+    if (message.author != "966782901037453383") {
       message.reply("Está prohibido hablar de PHP, primer aviso (?)");
     }
   }
 
   if (message.content.toUpperCase().includes("wordpress".toUpperCase())) {
-    if (message.author != "638514826884153356") {
+    if (message.author != "966782901037453383") {
       message.reply("Wordpress? Donde??!! NOOOOOOOOOOOOOOO HUYAMOS!!");
     }
   }
 
   // if (message.content.toUpperCase().includes("caro".toUpperCase())) {
-  //   if (message.author != "638514826884153356") {
+  //   if (message.author != "966782901037453383") {
   //     message.channel.send("CAROOOO TE AMOOOOOOO ❤️");
   //   }
   // }
@@ -330,7 +330,7 @@ client.on("message", async (message) => {
   //     message.content.toUpperCase().includes("cambio".toUpperCase())) &&
   //   message.content.toUpperCase().includes("rama".toUpperCase())
   // ) {
-  //   if (message.author != "638514826884153356") {
+  //   if (message.author != "966782901037453383") {
   //     message.channel.send(
   //       "Para cambiar de rama en github tenés que ponerte a estudiar un poco soquete :)"
   //     );
@@ -341,7 +341,7 @@ client.on("message", async (message) => {
   //   message.content.toUpperCase().includes("facu".toUpperCase()) ||
   //   message.content.toUpperCase().includes("citio".toUpperCase())
   // ) {
-  //   if (message.author != "638514826884153356") {
+  //   if (message.author != "966782901037453383") {
   //     //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
   //     message.reply(
   //       "EL CITIOU! EL CITIOU LLEGA TARDE A UNA ENTREVISTA VIRTUAL"
@@ -353,7 +353,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("#teamtiburoncin".toUpperCase()) ||
     message.content.toUpperCase().includes("team tiburoncin".toUpperCase())
   ) {
-    if (message.author != "638514826884153356") {
+    if (message.author != "966782901037453383") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "Vamo che! Aguante el #TeamTiburoncin 🦈 ponete un nombre como la gente bot de NUCBA"
@@ -365,7 +365,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("#teamnucba".toUpperCase()) ||
     message.content.toUpperCase().includes("team nucba".toUpperCase())
   ) {
-    if (message.author != "638514826884153356") {
+    if (message.author != "966782901037453383") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "#TeamNucba mercenarios, ponete un nombre como la gente Bot de NUCBA. #TeamTiburoncin PRESENTE!"
@@ -377,7 +377,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("quien es tiburonc".toUpperCase()) ||
     message.content.toUpperCase().includes("es tiburon".toUpperCase())
   ) {
-    if (message.author != "638514826884153356") {
+    if (message.author != "966782901037453383") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "Hola soy Tiburoncin! El más mejor bot de todos y guardaespaldas personal de Santi 🦈 haganme caso o no aprenden CSS"
@@ -386,7 +386,7 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("santi".toUpperCase())) {
-    if (message.author != "638514826884153356") {
+    if (message.author != "966782901037453383") {
       message.channel.send(
         "Santi, te llaman hermano... aparecé dejá de comer Oreos"
       );
@@ -400,7 +400,6 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("!adel".toUpperCase())) {
-    console.log("Message author: ", message.author);
     const embed = new MessageEmbed()
       .setTitle("Dijeron DOCUMENTACIÓN?")
       .setColor("#FF00A2")
@@ -441,6 +440,31 @@ client.on("message", async (message) => {
       });
     message.channel.send(embed);
   }
+
+  if (message.content.toUpperCase().includes("bena".toUpperCase())) {
+    if (message.author != "966782901037453383") {
+      message.reply("LA BENA DURAAAAAAAAA");
+    }
+  }
+
+  if (message.content.toUpperCase().includes("globo".toUpperCase())) {
+    if (message.author != "966782901037453383") {
+      message.reply(`AGUANTE HURACÁN 
+      ⬜⬜⬜🟥🟥🟥⬜⬜⬜
+      ⬜⬜🟥⬜⬜⬜🟥⬜⬜
+      ⬜🟥⬜⬜⬜⬜⬜🟥⬜
+      ⬜🟥⬜🟥⬜🟥⬜🟥⬜
+      ⬜🟥⬜🟥🟥🟥⬜🟥⬜
+      ⬜🟥⬜🟥⬜🟥⬜🟥⬜
+      ⬜🟥⬜⬜⬜⬜⬜🟥⬜
+      ⬜⬜🟥⬜⬜⬜🟥⬜⬜
+      ⬜⬜⬜🟥🟥🟥⬜⬜⬜
+      ⬜⬜⬜🟥⬜🟥⬜⬜⬜
+      ⬜⬜⬜🟥🟥🟥⬜⬜⬜`);
+    }
+  }
+
+  // Fin
 });
 
 client.login("OTY2NzgyOTAxMDM3NDUzMzgz.YmGwvQ.4czNiBnSWjOmRHvZ5aGo85nTtmw");

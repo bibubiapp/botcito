@@ -442,4 +442,4 @@ client.on("message", async (message) => {
   }
 });
 
-client.login("ODI5MDUxMzYwMTgzOTc2MDQ2.YGygPw.oHiWHu_WUDWYzuBMWx9XvCp9CeQ");
+client.login("OTY2NzgyOTAxMDM3NDUzMzgz.YmGwvQ.4czNiBnSWjOmRHvZ5aGo85nTtmw");

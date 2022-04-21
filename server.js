@@ -266,6 +266,124 @@ const docuArray = [
   },
 ];
 
+const diegoArray = [
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-armando-maradona-festejo-boca-gif-18081754",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-world-cup2018-argentina-national-team-football-match-soccer-game-gif-12094403",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/maradona-diego-soccer-dios-el-diez-gif-24231370",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-armando-maradona-maradona-techno-dancing-dance-gif-12515625",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-armando-maradona-festejo-boca-gif-18081764",
+  },
+  {
+    gifUrl: "https://tenor.com/view/maradona-dance-pool-gif-10284953",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/baila-dance-argentina-maradona-funny-gif-12211279",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/celebrando-diego-maradona-liga-profesional-de-f%C3%BAtbol-de-la-afa-feliz-victoria-gif-20571005",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-fuck-you-racing-dt-gif-23181459",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/maradona-maradona-gol-argentina-maradona-celebracion-thank-you-gif-12069440",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/maradona-diego-armando-diego-armando-maradona-italia90-mundial-gif-17192842",
+  },
+  {
+    gifUrl: "https://tenor.com/view/maradona-gif-23881452",
+  },
+  {
+    gifUrl: "https://tenor.com/view/maradona-mueca-diego-maradona-gif-5619520",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/maradona-gallina-boca-maradona-gallina-gallinita-gif-16525231",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/beat-chest-diego-maradona-liga-profesional-de-f%C3%BAtbol-de-la-afa-i-feel-you-respect-gif-18002410",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-maradona-boca-juniors-boca-gif-21207362",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-maradona-argentina-dribbling-dribble-gif-21207270",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/lo-hicimos-diego-maradona-liga-profesional-de-f%C3%BAtbol-de-la-afa-feliz-emocionado-gif-20570966",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/feliz-diego-maradona-liga-profesional-de-f%C3%BAtbol-de-la-afa-celebrando-abrazo-gif-20571020",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-maradona-soccer-skills-napoli-naples-gif-21207066",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/maradona-f%C3%BAtbol-argentino-superclasico-diego-maradona-se-le-cay%C3%B3la-bombachita-gif-25200753",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/el-diego-loco-maradona-diegote-gif-14527634",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/beso-de-tevez-a-maradona-beso-tevez-boca-maradona-gif-16524564",
+  },
+  {
+    gifUrl: "https://tenor.com/view/putto-gif-19337272",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-world-cup2018-argentina-national-team-football-match-soccer-game-gif-12094429",
+  },
+  {
+    gifUrl: "https://tenor.com/view/maradona-brazil-90-gif-10654654",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/alcohol-tequila-drunk-vodka-argentina-gif-12069688",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-maradona-el-diego-argentina-keepie-ups-gif-21207013",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-el-diego-maradona-argentina-keepie-ups-gif-21206944",
+  },
+  {
+    gifUrl:
+      "https://tenor.com/view/diego-maradona-maradona-diego-mexico86-world-cup-winner-gif-21207404",
+  },
+];
+
 client.on("message", async (message) => {
   // if (message.author.bot) return;
 
@@ -386,6 +504,19 @@ client.on("message", async (message) => {
     if (message.author != "966782901037453383") {
       message.channel.send(
         "Santi, te llaman hermano... aparecé dejá de comer Oreos"
+      );
+    }
+  }
+
+  if (message.content.toUpperCase().includes("!diego".toUpperCase())) {
+    const randomNumber = Math.floor(Math.random() * diegoArray.length + 1);
+    const randomDiego = diegoArray[randomNumber];
+
+    if (message.author != "966782901037453383") {
+      message.channel.send(
+        `:blue_heart: :regional_indicator_d::one::regional_indicator_e::regional_indicator_g::zero: :blue_heart: 
+        
+        ${randomDiego.gifUrl}`
       );
     }
   }

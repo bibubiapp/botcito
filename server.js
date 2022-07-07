@@ -601,7 +601,7 @@ client.on("message", async (message) => {
   ) {
     if (message.author != "966782901037453383") {
       message.reply(`POR ESO YOOO QUIERO QUEMAAAR TODO EL MONUMENTAAAAL 
-      :blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square:
+:blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square:
 :white_large_square: :blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square: :white_large_square:
 :white_large_square: :white_large_square: :blue_square: :blue_square: :white_large_square: :blue_square: :blue_square: :white_large_square: :white_large_square:
 :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square:

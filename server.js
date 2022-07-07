@@ -595,6 +595,27 @@ client.on("message", async (message) => {
     }
   }
 
+  if (
+    message.content.toUpperCase().includes("velez".toUpperCase()) ||
+    message.content.toUpperCase().includes("vélez".toUpperCase())
+  ) {
+    if (message.author != "966782901037453383") {
+      message.reply(`POR ESO YOOO QUIERO QUEMAAAR TODO EL MONUMENTAAAAL 
+      :blue_square: :white_large_square:`);
+    }
+  }
+
+  if (
+    message.content.toUpperCase().includes("guli".toUpperCase()) ||
+    message.content.toUpperCase().includes("guly".toUpperCase())
+  ) {
+    if (message.author != "966782901037453383") {
+      message.reply(
+        `GULI TE PERTENEZCO, HACEME TUYO :sweat_drops: :shark: rawrrr`
+      );
+    }
+  }
+
   // Fin
 });
 

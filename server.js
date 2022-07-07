@@ -612,14 +612,20 @@ client.on("message", async (message) => {
     }
   }
 
+  const mensajesParaGuli = {
+    0: "GULI TE PERTENEZCO, HACEME TUYO :sweat_drops: :shark: rawrrr",
+    1: "KE OMBRE GULI POR FAVORRR :sweat_drops:",
+    2: "GOOLEEEEEEEEE se me pone guliosa :drooling_face:",
+    3: "LA GULINETAAAAAAAAA :bus: :rocket:",
+  };
+
   if (
     message.content.toUpperCase().includes("guli".toUpperCase()) ||
     message.content.toUpperCase().includes("guly".toUpperCase())
   ) {
+    const randomNumber = Math.floor(Math.random() * 4);
     if (message.author != "966782901037453383") {
-      message.reply(
-        `GULI TE PERTENEZCO, HACEME TUYO :sweat_drops: :shark: rawrrr`
-      );
+      message.reply(mensajesParaGuli[randomNumber]);
     }
   }
 

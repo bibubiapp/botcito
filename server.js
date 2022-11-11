@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const { Client, MessageEmbed } = require("discord.js");
 const client = new Client();
 
@@ -384,91 +386,642 @@ const diegoArray = [
   },
 ];
 
+const palabrotasArray = [
+  "puto",
+  " puta",
+  "hdp",
+  "p*ta",
+  "trolo",
+  "culia",
+  "pelotudo",
+  "pija",
+  "poronga",
+  "concha",
+  "forro",
+  "forra",
+  "pelotuda",
+  "pajero",
+  "pajera",
+  "chupa pij",
+  "hijo de p",
+  "hija de p",
+  "conchudo",
+  "cornudo",
+];
+
+const equipos = {
+  qatar: "Qatar :flag_qa:",
+  ecuador: "Ecuador :flag_ec:",
+  senegal: "Senegal :flag_sn:",
+  paisesBajos: "Países Bajos :flag_nl:",
+
+  inglaterra: "Inglaterra :england:",
+  iran: "Iran :flag_ir:",
+  usa: "Usa :flag_us:",
+  gales: "Gales :wales:",
+
+  argentina: "Argentina :flag_ar:",
+  arabia: "Arabia :flag_sa:",
+  mexico: "México :flag_mx:",
+  polonia: "Polonia :flag_pl:",
+
+  francia: "Francia :flag_fr:",
+  australia: "Australia :flag_au:",
+  dinamarca: "Dinamarca :flag_dk:",
+  tunez: "Túnez :flag_tn:",
+
+  espana: "España :flag_es:",
+  costaRica: "Costa Rica :flag_cr:",
+  alemania: "Alemania :flag_de:",
+  japon: "Japón :flag_jp:",
+
+  belgica: "Bélgica :flag_be:",
+  canada: "Canadá :flag_ca:",
+  marruecos: "Marruecos :flag_ma:",
+  croacia: "Croacia :flag_hr:",
+
+  brasil: "Brasil :flag_br:",
+  serbia: "Serbia :flag_rs:",
+  suiza: "Suiza :flag_se:",
+  camerun: "Camerún :flag_cm:",
+
+  portugal: "Portugal :flag_pt:",
+  ghana: "Ghana :flag_gh:",
+  uruguay: "Uruguay :flag_uy:",
+  corea: "Corea del Sur :flag_kr:",
+};
+
+const tele = {
+  tyc: "TyC Sports",
+  tyc2: "TyC Sports 2",
+  tvpublica: "TV Pública",
+  direct: "DirectTV",
+};
+
+const fixture = [
+  // 20
+  {
+    fecha: new Date("11/20/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.qatar,
+        visitante: equipos.ecuador,
+        hora: "13:00hs",
+        grupo: "A",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al bayt - Jor",
+      },
+    ],
+  },
+  // 21
+  {
+    fecha: new Date("11/21/2022"),
+    partidos: [
+      {
+        id: 2,
+        local: equipos.inglaterra,
+        visitante: equipos.iran,
+        hora: "10:00hs",
+        grupo: "B",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Khalifa - Doha",
+      },
+      {
+        id: 3,
+        local: equipos.senegal,
+        visitante: equipos.paisesBajos,
+        hora: "13:00hs",
+        grupo: "A",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Thumama - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.usa,
+        visitante: equipos.gales,
+        hora: "16:00hs",
+        grupo: "B",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Al Thumama - Doha",
+      },
+    ],
+  },
+  // 22
+  {
+    fecha: new Date("11/22/2022"),
+    partidos: [
+      {
+        id: 5,
+        local: equipos.argentina,
+        visitante: equipos.arabia,
+        hora: "07:00hs",
+        grupo: "C",
+        tele: [tele.tyc, tele.direct, tele.tvpublica],
+        estadio: "Lusail - Lusail",
+      },
+      {
+        id: 6,
+        local: equipos.dinamarca,
+        visitante: equipos.tunez,
+        hora: "10:00hs",
+        grupo: "D",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ciudad de la Educacion - Rayan",
+      },
+      {
+        id: 7,
+        local: equipos.mexico,
+        visitante: equipos.polonia,
+        hora: "13:00hs",
+        grupo: "C",
+        tele: [tele.tyc, tele.direct],
+        estadio: "974 - Doha",
+      },
+      {
+        id: 8,
+        local: equipos.francia,
+        visitante: equipos.australia,
+        hora: "16:00hs",
+        grupo: "D",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Al Janoub - Al Wakrah",
+      },
+    ],
+  },
+  // 23
+  {
+    fecha: new Date("11/23/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.marruecos,
+        visitante: equipos.croacia,
+        hora: "07:00hs",
+        grupo: "F",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Al Bayt - Jor",
+      },
+      {
+        id: 2,
+        local: equipos.alemania,
+        visitante: equipos.japon,
+        hora: "10:00hs",
+        grupo: "E",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Khalifa - Doha",
+      },
+      {
+        id: 3,
+        local: equipos.espana,
+        visitante: equipos.costaRica,
+        hora: "13:00hs",
+        grupo: "E",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Thumama - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.belgica,
+        visitante: equipos.canada,
+        hora: "16:00hs",
+        grupo: "F",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Ahmad bin Ali - Rayan",
+      },
+    ],
+  },
+  // 24
+  {
+    fecha: new Date("11/24/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.suiza,
+        visitante: equipos.camerun,
+        hora: "07:00hs",
+        grupo: "G",
+        tele: [tele.tyc, tele.direct, tele.tvpublica],
+        estadio: "Al Janoub - Al Wakrah",
+      },
+      {
+        id: 2,
+        local: equipos.uruguay,
+        visitante: equipos.corea,
+        hora: "10:00hs",
+        grupo: "H",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ciudad de la Educacion - Rayan",
+      },
+      {
+        id: 3,
+        local: equipos.portugal,
+        visitante: equipos.ghana,
+        hora: "13:00hs",
+        grupo: "H",
+        tele: [tele.tyc, tele.direct],
+        estadio: "974 - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.brasil,
+        visitante: equipos.serbia,
+        hora: "16:00hs",
+        grupo: "G",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Lusail - Lusail",
+      },
+    ],
+  },
+  // 25
+  {
+    fecha: new Date("11/25/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.gales,
+        visitante: equipos.iran,
+        hora: "07:00hs",
+        grupo: "B",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ahmad bin Ali - Rayan",
+      },
+      {
+        id: 2,
+        local: equipos.qatar,
+        visitante: equipos.senegal,
+        hora: "10:00hs",
+        grupo: "A",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Thumama - Doha",
+      },
+      {
+        id: 3,
+        local: equipos.paisesBajos,
+        visitante: equipos.ecuador,
+        hora: "13:00hs",
+        grupo: "A",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Khalifa - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.inglaterra,
+        visitante: equipos.usa,
+        hora: "16:00hs",
+        grupo: "B",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Bayt - Jor",
+      },
+    ],
+  },
+  // 26
+  {
+    fecha: new Date("11/26/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.tunez,
+        visitante: equipos.australia,
+        hora: "07:00hs",
+        grupo: "D",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Al Janoub - Al Wakrah",
+      },
+      {
+        id: 2,
+        local: equipos.polonia,
+        visitante: equipos.arabia,
+        hora: "10:00hs",
+        grupo: "C",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ciudad de la Educacion - Rayan",
+      },
+      {
+        id: 3,
+        local: equipos.francia,
+        visitante: equipos.dinamarca,
+        hora: "13:00hs",
+        grupo: "D",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "974 - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.argentina,
+        visitante: equipos.mexico,
+        hora: "16:00hs",
+        grupo: "C",
+        tele: [tele.tyc, tele.tvpublica, tele.direct],
+        estadio: "Lusail - Lusail",
+      },
+    ],
+  },
+  // 27
+  {
+    fecha: new Date("11/27/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.japon,
+        visitante: equipos.costaRica,
+        hora: "07:00hs",
+        grupo: "E",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ahmad bin Ali - Rayan",
+      },
+      {
+        id: 2,
+        local: equipos.belgica,
+        visitante: equipos.marruecos,
+        hora: "10:00hs",
+        grupo: "F",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Al Thumama - Doha",
+      },
+      {
+        id: 3,
+        local: equipos.croacia,
+        visitante: equipos.canada,
+        hora: "13:00hs",
+        grupo: "F",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Khalifa - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.espana,
+        visitante: equipos.alemania,
+        hora: "16:00hs",
+        grupo: "E",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Bayt - Jor",
+      },
+    ],
+  },
+  // 28
+  {
+    fecha: new Date("11/28/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.camerun,
+        visitante: equipos.serbia,
+        hora: "07:00hs",
+        grupo: "G",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Al Janoub - Al Wakrah",
+      },
+      {
+        id: 2,
+        local: equipos.corea,
+        visitante: equipos.ghana,
+        hora: "10:00hs",
+        grupo: "H",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ciudad de la Educacion - Rayan",
+      },
+      {
+        id: 3,
+        local: equipos.brasil,
+        visitante: equipos.suiza,
+        hora: "13:00hs",
+        grupo: "G",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "974 - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.portugal,
+        visitante: equipos.uruguay,
+        hora: "16:00hs",
+        grupo: "H",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Lusail - Lusail",
+      },
+    ],
+  },
+  // 29
+  {
+    fecha: new Date("11/29/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.paisesBajos,
+        visitante: equipos.qatar,
+        hora: "12:00hs",
+        grupo: "A",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Bayt - Jor",
+      },
+      {
+        id: 2,
+        local: equipos.ecuador,
+        visitante: equipos.senegal,
+        hora: "12:00hs",
+        grupo: "A",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Khalifa - Doha",
+      },
+      {
+        id: 3,
+        local: equipos.gales,
+        visitante: equipos.inglaterra,
+        hora: "16:00hs",
+        grupo: "B",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ahmad bin Ali - Rayan",
+      },
+      {
+        id: 4,
+        local: equipos.iran,
+        visitante: equipos.usa,
+        hora: "16:00hs",
+        grupo: "B",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Thumama - Doha",
+      },
+    ],
+  },
+  // 30
+  {
+    fecha: new Date("11/30/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.tunez,
+        visitante: equipos.francia,
+        hora: "12:00hs",
+        grupo: "D",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ciudad de la Educacion - Rayan",
+      },
+      {
+        id: 2,
+        local: equipos.australia,
+        visitante: equipos.dinamarca,
+        hora: "12:00hs",
+        grupo: "D",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Janoub - Al Wakrah",
+      },
+      {
+        id: 3,
+        local: equipos.polonia,
+        visitante: equipos.argentina,
+        hora: "16:00hs",
+        grupo: "C",
+        tele: [tele.tyc, tele.tvpublica, tele.direct],
+        estadio: "974 - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.arabia,
+        visitante: equipos.mexico,
+        hora: "16:00hs",
+        grupo: "C",
+        tele: [tele.tyc2, tele.direct],
+        estadio: "Lusail - Lusail",
+      },
+    ],
+  },
+  // 1
+  {
+    fecha: new Date("12/01/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.croacia,
+        visitante: equipos.belgica,
+        hora: "12:00hs",
+        grupo: "F",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ahmad bin Ali - Rayan",
+      },
+      {
+        id: 2,
+        local: equipos.canada,
+        visitante: equipos.marruecos,
+        hora: "12:00hs",
+        grupo: "F",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Thumama - Doha",
+      },
+      {
+        id: 3,
+        local: equipos.japon,
+        visitante: equipos.espana,
+        hora: "16:00hs",
+        grupo: "E",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Khalifa - Doha",
+      },
+      {
+        id: 4,
+        local: equipos.costaRica,
+        visitante: equipos.alemania,
+        hora: "16:00hs",
+        grupo: "E",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Bayt - Jor",
+      },
+    ],
+  },
+  // 2
+  {
+    fecha: new Date("12/02/2022"),
+    partidos: [
+      {
+        id: 1,
+        local: equipos.corea,
+        visitante: equipos.portugal,
+        hora: "12:00hs",
+        grupo: "H",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Ciudad de la Educacion - Rayan",
+      },
+      {
+        id: 2,
+        local: equipos.ghana,
+        visitante: equipos.uruguay,
+        hora: "12:00hs",
+        grupo: "H",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "Al Janoub - Al Wakrah",
+      },
+      {
+        id: 3,
+        local: equipos.camerun,
+        visitante: equipos.brasil,
+        hora: "16:00hs",
+        grupo: "G",
+        tele: [tele.tyc, tele.direct],
+        estadio: "Lusail - Lusail",
+      },
+      {
+        id: 4,
+        local: equipos.serbia,
+        visitante: equipos.suiza,
+        hora: "16:00hs",
+        grupo: "G",
+        tele: [tele.tvpublica, tele.direct],
+        estadio: "974 - Doha",
+      },
+    ],
+  },
+];
+
 client.on("message", async (message) => {
   // if (message.author.bot) return;
 
   if (
-    message.content.toUpperCase().includes("puto".toUpperCase()) ||
-    message.content.toUpperCase().includes(" puta".toUpperCase()) ||
-    message.content.toUpperCase().includes("hdp".toUpperCase()) ||
-    message.content.toUpperCase().includes("p*ta".toUpperCase()) ||
-    message.content.toUpperCase().includes("put*".toUpperCase()) ||
-    message.content.toUpperCase().includes("hdp".toUpperCase()) ||
-    message.content.toUpperCase().includes("trolo".toUpperCase()) ||
-    message.content.toUpperCase().includes("culia".toUpperCase()) ||
-    message.content.toUpperCase().includes("pelotudo".toUpperCase()) ||
-    message.content.toUpperCase().includes("pija".toUpperCase()) ||
-    message.content.toUpperCase().includes("concha".toUpperCase()) ||
-    message.content.toUpperCase().includes("forro".toUpperCase()) ||
-    message.content.toUpperCase().includes("pajero".toUpperCase()) ||
-    message.content.toUpperCase().includes("chupa pij".toUpperCase()) ||
-    message.content.toUpperCase().includes("hijo de p".toUpperCase())
+    palabrotasArray
+      .map((palabra) =>
+        message.content
+          .toUpperCase()
+          .includes(palabra.toUpperCase().toUpperCase())
+      )
+      .some((valor) => valor)
   ) {
+    console.log("Mala palabra?");
+    console.log(
+      palabrotasArray
+        .map((palabra) =>
+          palabra
+            .toUpperCase()
+            .includes(message.content.toUpperCase().toUpperCase())
+        )
+        .some((valor) => valor)
+    );
+
+    console.log(message);
     message.reply("EU, LAS PALABRITAS EH");
   }
 
-  // if (
-  //   message.content.toUpperCase().includes("lucho".toUpperCase()) ||
-  //   message.content.toUpperCase().includes("lucian".toUpperCase())
-  // ) {
-  //   if (message.author != "966782901037453383") {
-  //     message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
-  //   }
-  // }
+  if (
+    message.content.toUpperCase().includes("lucho".toUpperCase()) ||
+    message.content.toUpperCase().includes("lucian".toUpperCase())
+  ) {
+    if (message.author != "829051360183976046") {
+      message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
+    }
+  }
 
   if (message.content.toUpperCase().includes("lo rompis".toUpperCase())) {
     message.reply("SANTI NO ROMPIÓ NADA, CALMATE");
   }
 
-  if (message.content.toUpperCase().includes("php".toUpperCase())) {
-    if (message.author != "966782901037453383") {
-      message.reply("Está prohibido hablar de PHP, primer aviso (?)");
-    }
-  }
-
   if (message.content.toUpperCase().includes("wordpress".toUpperCase())) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       message.reply("Wordpress? Donde??!! NOOOOOOOOOOOOOOO HUYAMOS!!");
     }
   }
-
-  // if (message.content.toUpperCase().includes("caro".toUpperCase())) {
-  //   if (message.author != "966782901037453383") {
-  //     message.channel.send("CAROOOO TE AMOOOOOOO ❤️");
-  //   }
-  // }
-
-  // if (
-  //   (message.content.toUpperCase().includes("github".toUpperCase()) ||
-  //     message.content.toUpperCase().includes("git".toUpperCase())) &&
-  //   (message.content.toUpperCase().includes("cambiar".toUpperCase()) ||
-  //     message.content.toUpperCase().includes("cambio".toUpperCase())) &&
-  //   message.content.toUpperCase().includes("rama".toUpperCase())
-  // ) {
-  //   if (message.author != "966782901037453383") {
-  //     message.channel.send(
-  //       "Para cambiar de rama en github tenés que ponerte a estudiar un poco soquete :)"
-  //     );
-  //   }
-  // }
-
-  // if (
-  //   message.content.toUpperCase().includes("facu".toUpperCase()) ||
-  //   message.content.toUpperCase().includes("citio".toUpperCase())
-  // ) {
-  //   if (message.author != "966782901037453383") {
-  //     //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
-  //     message.reply(
-  //       "EL CITIOU! EL CITIOU LLEGA TARDE A UNA ENTREVISTA VIRTUAL"
-  //     );
-  //   }
-  // }
 
   if (
     message.content.toUpperCase().includes("#teamtiburoncin".toUpperCase()) ||
     message.content.toUpperCase().includes("team tiburoncin".toUpperCase())
   ) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "Vamo che! Aguante el #TeamTiburoncin 🦈 ponete un nombre como la gente bot de NUCBA"
@@ -480,7 +1033,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("#teamnucba".toUpperCase()) ||
     message.content.toUpperCase().includes("team nucba".toUpperCase())
   ) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "#TeamNucba mercenarios, ponete un nombre como la gente Bot de NUCBA. #TeamTiburoncin PRESENTE!"
@@ -490,9 +1043,10 @@ client.on("message", async (message) => {
 
   if (
     message.content.toUpperCase().includes("quien es tiburonc".toUpperCase()) ||
+    message.content.toUpperCase().includes("tiburoncin".toUpperCase()) ||
     message.content.toUpperCase().includes("es tiburon".toUpperCase())
   ) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "Hola soy Tiburoncin! El más mejor bot de todos y guardaespaldas personal de Santi 🦈 haganme caso o no aprenden CSS"
@@ -501,7 +1055,7 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("santi".toUpperCase())) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       message.channel.send(
         "Santi, te llaman hermano... aparecé dejá de comer Oreos"
       );
@@ -512,7 +1066,7 @@ client.on("message", async (message) => {
     const randomNumber = Math.floor(Math.random() * diegoArray.length + 1);
     const randomDiego = diegoArray[randomNumber];
 
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       message.channel.send(
         `:blue_heart: :regional_indicator_d::one::regional_indicator_e::regional_indicator_g::zero: :blue_heart: 
         
@@ -573,13 +1127,13 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("bena".toUpperCase())) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       message.reply("LA BENA DURAAAAAAAAA");
     }
   }
 
   if (message.content.toUpperCase().includes("globo".toUpperCase())) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       message.reply(`AGUANTE HURACÁN 
       ⬜⬜⬜🟥🟥🟥⬜⬜⬜
       ⬜⬜🟥⬜⬜⬜🟥⬜⬜
@@ -599,7 +1153,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("velez".toUpperCase()) ||
     message.content.toUpperCase().includes("vélez".toUpperCase())
   ) {
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       message.reply(`POR ESO YOOO QUIERO QUEMAAAR TODO EL MONUMENTAAAAL 
 :blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square:
 :white_large_square: :blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square: :white_large_square:
@@ -617,6 +1171,7 @@ client.on("message", async (message) => {
     1: "KE OMBRE GULI POR FAVORRR :sweat_drops:",
     2: "GOOLEEEEEEEEE se me pone guliosa :drooling_face:",
     3: "LA GULINETAAAAAAAAA :bus: :rocket:",
+    4: "A veces necesito que guli me haga el amor :sweat_drops:",
   };
 
   if (
@@ -624,12 +1179,74 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("guly".toUpperCase())
   ) {
     const randomNumber = Math.floor(Math.random() * 4);
-    if (message.author != "966782901037453383") {
+    if (message.author != "829051360183976046") {
       message.reply(mensajesParaGuli[randomNumber]);
+    }
+  }
+
+  if (
+    message.content.toUpperCase().includes("riber".toUpperCase()) ||
+    message.content.toUpperCase().includes("river".toUpperCase())
+  ) {
+    if (message.author != "829051360183976046") {
+      message.reply(
+        `https://tenor.com/view/riber-fire-stadium-flame-gif-7661285`
+      );
+    }
+  }
+
+  if (message.content.toUpperCase().includes("!quienjuegahoy".toUpperCase())) {
+    if (message.author != "829051360183976046") {
+      const fechaHoy = new Date().toDateString();
+
+      const buscarPartidos = fixture.filter(
+        (partidos) => partidos.fecha.toDateString() === fechaHoy
+      );
+
+      const hayPartidos = buscarPartidos.length > 0;
+
+      const partidosHoy = buscarPartidos[0];
+
+      const proximoPartido = fixture
+        .map((fecha) => {
+          const hoy = new Date();
+          const diaDeFecha = new Date(fecha.fecha);
+          const diffTime = diaDeFecha - hoy;
+          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+          return diffDays;
+        })
+        .filter((fecha) => fecha > 0)[0];
+
+      message.channel.send(
+        !hayPartidos
+          ? `
+Hola! Acá tiburoncín modo mundial :flag_ar: :trophy:
+
+Hoy no hay partidos manija! Faltan ${proximoPartido} para el próximo partido :eyes:
+
+       `
+          : `
+Hola! Acá tiburoncín modo mundial :flag_ar: :trophy:
+
+:point_right::skin-tone-3: Estos son los partidos del día de la fecha (${partidosHoy.fecha.toLocaleDateString()}):
+${partidosHoy.partidos
+  .map(
+    (partido) => `
+:soccer: Juega ${partido.local} contra ${partido.visitante} a las ${
+      partido.hora
+    }, en el estadio ${partido.estadio}. Y lo podés ver por ${partido.tele.join(
+      " y "
+    )}.
+`
+  )
+  .join(" ")}
+`
+      );
     }
   }
 
   // Fin
 });
 
-client.login("OTY2NzgyOTAxMDM3NDUzMzgz.YmGwvQ.4czNiBnSWjOmRHvZ5aGo85nTtmw");
+client.login(process.env.DISCORD_TOKEN);

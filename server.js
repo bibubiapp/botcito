@@ -1237,9 +1237,9 @@ ${partidosHoy.partidos
     (partido) => `
 :soccer: Juega ${partido.local} contra ${partido.visitante} a las ${
       partido.hora
-    }, en el estadio ${partido.estadio}. Y lo podés ver por ${partido.tele.join(
-      " y "
-    )}.
+    }, en el estadio ${partido.estadio}. Y lo podés ver por ${
+      partido.tele.slice(0, -1).join(", ") + " y " + partido.tele.at(-1)
+    }.
 `
   )
   .join(" ")}

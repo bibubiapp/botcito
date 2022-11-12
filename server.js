@@ -1229,7 +1229,9 @@ Hoy no hay partidos manijaaaaa! Faltan ${proximoPartido} días para el próximo 
           : `
 Hola! Acá tiburoncín modo mundial :flag_ar: :trophy:
 
-:point_right::skin-tone-3: Estos son los partidos del día de la fecha (${partidosHoy.fecha.toLocaleDateString()}):
+:point_right::skin-tone-3: Estos son los partidos del día de la fecha (${partidosHoy.fecha.getDate()}/${
+              partidosHoy.fecha.getMonth() + 1
+            }/${partidosHoy.fecha.getFullYear()}):
 ${partidosHoy.partidos
   .map(
     (partido) => `

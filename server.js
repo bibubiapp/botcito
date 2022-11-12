@@ -420,7 +420,7 @@ const equipos = {
   usa: "Usa :flag_us:",
   gales: "Gales :wales:",
 
-  argentina: "Argentina :flag_ar:",
+  argentina: "Argentina :flag_ar: (VAMO SELESIÓN!)",
   arabia: "Arabia :flag_sa:",
   mexico: "México :flag_mx:",
   polonia: "Polonia :flag_pl:",

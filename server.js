@@ -1223,7 +1223,7 @@ client.on("message", async (message) => {
           ? `
 Hola! Acá tiburoncín modo mundial :flag_ar: :trophy:
 
-Hoy no hay partidos manija! Faltan ${proximoPartido} para el próximo partido :eyes:
+Hoy no hay partidos manijaaaaa! Faltan ${proximoPartido} días para el próximo partido :eyes:
 
        `
           : `

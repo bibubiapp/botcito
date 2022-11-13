@@ -1197,7 +1197,7 @@ client.on("message", async (message) => {
 
   if (message.content.toUpperCase().includes("!quienjuegahoy".toUpperCase())) {
     if (message.author != "829051360183976046") {
-      const fechaHoy = new Date("11/22/2022").toDateString();
+      const fechaHoy = new Date().toDateString();
 
       const buscarPartidos = fixture.filter(
         (partidos) => partidos.fecha.toDateString() === fechaHoy

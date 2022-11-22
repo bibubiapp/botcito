@@ -1070,11 +1070,10 @@ client.on("message", async (message) => {
     `VOLVÍ! Nunca hice lo que hacen, por eso no me alcanzaron`,
     `VOLVÍ! Después de haber notado mi nivel desenfrenado, muchos perros se tragaron todo lo que me vomitaron.
     Mucho bla-bla-bla, pero no hacen nada como nosotro lo hacemo, siempre tamo pleno`,
+    `VOLVÍ! DANCEN AHORA :shark:`,
   ];
 
-  if (
-    message.content.toUpperCase().includes("volvio tiburoncin".toUpperCase())
-  ) {
+  if (message.content.toUpperCase().includes("volvio tibu".toUpperCase())) {
     const randomNumber = Math.floor(
       Math.random() * arrayFrasesVolvio.length + 1
     );

@@ -1107,6 +1107,16 @@ client.on("message", async (message) => {
     }
   }
 
+  if (message.content.toUpperCase().includes("!figurita".toUpperCase())) {
+    if (message.author.id !== "829051360183976046") {
+      message.channel.send("Hola", {
+        files: [
+          "https://http2.mlstatic.com/D_NQ_NP_932084-MLA52098021314_102022-O.webp",
+        ],
+      });
+    }
+  }
+
   if (message.content.toUpperCase().includes("!diego".toUpperCase())) {
     const randomNumber = Math.floor(Math.random() * diegoArray.length + 1);
     const randomDiego = diegoArray[randomNumber];

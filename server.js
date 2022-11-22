@@ -1074,15 +1074,15 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("volvio tibu".toUpperCase())) {
-    const randomNumber = Math.floor(
+    const numeroRandom = Math.floor(
       Math.random() * arrayFrasesVolvio.length + 1
     );
 
     if (message.author != "829051360183976046") {
       message.reply(
         `${
-          arrayFrasesVolvio[randomNumber]
-            ? arrayFrasesVolvio[randomNumber]
+          arrayFrasesVolvio[numeroRandom]
+            ? arrayFrasesVolvio[numeroRandom]
             : "Pero cómo que volví? Yo no entiendo... si yo NUNCA ME FUÍ :shark:"
         }`
       );

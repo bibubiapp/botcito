@@ -1055,17 +1055,32 @@ client.on("message", async (message) => {
     }
   }
 
-  if (message.content.toUpperCase().includes("turrito".toUpperCase())) {
-    if (message.author != "829051360183976046") {
-      message.reply(
-        `No tengo competencia,
-        Y cada vez que le compito ni me tengo que esforzar.
-        
-        Y al final no caí, me volví más fuerte para la sorpresa de varios.
+  const arrayFrasesVolvio = [
+    `VOLVÍ! Mi banda arranca gira, pa cortarno que me lleven
+    Y van a correr todo lo gato que se rebelen
+    Prueben si quieren, que volvió el nene`,
+    `VOLVÍ! No tengo competencia,
+    Y cada vez que le compito ni me tengo que esforzar.`,
+    `VOLVÍ! Y al final no caí, me volví más fuerte para la sorpresa de varios.`,
+    `VOLVÍ! Mi fe a la derecha, mi grupo a la izquierda, este tiburón no hay anzuelo que muerda.`,
+    `VOLVÍ! Escucho, callo y río. 
+    Me mirás, te miro.
+    Me tirás, te admiro.
+    Hay que ser hombre pa querer guerrear conmigo`,
+    `VOLVÍ! Nunca hice lo que hacen, por eso no me alcanzaron`,
+    `VOLVÍ! Después de haber notado mi nivel desenfrenado, muchos perros se tragaron todo lo que me vomitaron.
+    Mucho bla-bla-bla, pero no hacen nada como nosotro lo hacemo, siempre tamo pleno`,
+  ];
 
-        Mi fe a la derecha, mi grupo a la izquierda, este tiburón no hay anzuelo que muerda.        
-        `
-      );
+  if (
+    message.content.toUpperCase().includes("volvio tiburoncin".toUpperCase())
+  ) {
+    const randomNumber = Math.floor(
+      Math.random() * arrayFrasesVolvio.length + 1
+    );
+    const fraseRandom = arrayFrasesVolvio[randomNumber];
+    if (message.author != "829051360183976046") {
+      message.reply(fraseRandom);
     }
   }
 

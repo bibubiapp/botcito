@@ -992,6 +992,8 @@ const arrayFrasesVolvio = [
 client.on("message", async (message) => {
   // if (message.author.bot) return;
 
+  console.log(message.author);
+
   if (
     palabrotasArray
       .map((palabra) =>
@@ -1027,6 +1029,16 @@ client.on("message", async (message) => {
 
   if (message.content.toUpperCase().includes("lo rompis".toUpperCase())) {
     message.reply("SANTI NO ROMPIÓ NADA, CALMATE");
+  }
+
+  if (message.content.toUpperCase().includes("!estoanda".toUpperCase())) {
+    if (message.author.id !== "829051360183976046") {
+      message.reply(`
+      ANDA PIOLA
+      El id del bot es 829051360183976046
+      El id del que mandó el mensaje es ${message.author.id}      
+      `);
+    }
   }
 
   if (message.content.toUpperCase().includes("wordpress".toUpperCase())) {

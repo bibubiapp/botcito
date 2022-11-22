@@ -990,9 +990,7 @@ const arrayFrasesVolvio = [
 ];
 
 client.on("message", async (message) => {
-  console.log({ message });
-
-  // if (message.author.bot) return;
+  if (message.author.bot) return;
 
   if (
     palabrotasArray
@@ -1076,9 +1074,7 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("volvio tibu".toUpperCase())) {
-    const numeroRandom = Math.floor(
-      Math.random() * arrayFrasesVolvio.length + 1
-    );
+    const numeroRandom = Math.floor(Math.random() * arrayFrasesVolvio.length);
 
     if (message.author != "829051360183976046") {
       message.reply(

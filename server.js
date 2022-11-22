@@ -990,9 +990,9 @@ const arrayFrasesVolvio = [
 ];
 
 client.on("message", async (message) => {
-  // if (message.author.bot) return;
+  // if (message.author.id.bot) return;
 
-  console.log(message.author);
+  console.log(message.author.id);
 
   if (
     palabrotasArray
@@ -1022,7 +1022,7 @@ client.on("message", async (message) => {
   //   message.content.toUpperCase().includes("lucho".toUpperCase()) ||
   //   message.content.toUpperCase().includes("lucian".toUpperCase())
   // ) {
-  //   if (message.author != "829051360183976046") {
+  //   if (message.author.id !== "829051360183976046") {
   //     message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
   //   }
   // }
@@ -1036,13 +1036,13 @@ client.on("message", async (message) => {
       message.reply(`
       ANDA PIOLA
       El id del bot es 829051360183976046
-      El id del que mandó el mensaje es ${message.author.id}      
+      El id del que mandó el mensaje es ${message.author.id.id}      
       `);
     }
   }
 
   if (message.content.toUpperCase().includes("wordpress".toUpperCase())) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.reply("Wordpress? Donde??!! NOOOOOOOOOOOOOOO HUYAMOS!!");
     }
   }
@@ -1051,7 +1051,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("#teamtiburoncin".toUpperCase()) ||
     message.content.toUpperCase().includes("team tiburoncin".toUpperCase())
   ) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "Vamo che! Aguante el #TeamTiburoncin 🦈 ponete un nombre como la gente bot de NUCBA"
@@ -1063,7 +1063,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("#teamnucba".toUpperCase()) ||
     message.content.toUpperCase().includes("team nucba".toUpperCase())
   ) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         "#TeamNucba mercenarios, ponete un nombre como la gente Bot de NUCBA. #TeamTiburoncin PRESENTE!"
@@ -1076,7 +1076,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("tiburoncin".toUpperCase()) ||
     message.content.toUpperCase().includes("es tiburon".toUpperCase())
   ) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
         // "Hola soy Tiburoncin! El más mejor bot de todos y guardaespaldas personal de Santi 🦈 haganme caso o no aprenden CSS"
@@ -1088,7 +1088,7 @@ client.on("message", async (message) => {
   if (message.content.toUpperCase().includes("volvio tibu".toUpperCase())) {
     const numeroRandom = Math.floor(Math.random() * arrayFrasesVolvio.length);
 
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.reply(
         `${
           arrayFrasesVolvio[numeroRandom]
@@ -1100,7 +1100,7 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("santi".toUpperCase())) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.channel.send(
         "Santi, te llaman hermano... aparecé dejá de comer Oreos"
       );
@@ -1111,7 +1111,7 @@ client.on("message", async (message) => {
     const randomNumber = Math.floor(Math.random() * diegoArray.length + 1);
     const randomDiego = diegoArray[randomNumber];
 
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.channel.send(
         `:blue_heart: :regional_indicator_d::one::regional_indicator_e::regional_indicator_g::zero: :blue_heart: 
         
@@ -1172,13 +1172,13 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("bena".toUpperCase())) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.reply("LA BENA DURAAAAAAAAA");
     }
   }
 
   if (message.content.toUpperCase().includes("globo".toUpperCase())) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.reply(`AGUANTE HURACÁN 
       ⬜⬜⬜🟥🟥🟥⬜⬜⬜
       ⬜⬜🟥⬜⬜⬜🟥⬜⬜
@@ -1198,7 +1198,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("velez".toUpperCase()) ||
     message.content.toUpperCase().includes("vélez".toUpperCase())
   ) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.reply(`POR ESO YOOO QUIERO QUEMAAAR TODO EL MONUMENTAAAAL 
 :blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square:
 :white_large_square: :blue_square: :blue_square: :white_large_square: :white_large_square: :white_large_square: :blue_square: :blue_square: :white_large_square:
@@ -1224,7 +1224,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("guly".toUpperCase())
   ) {
     const randomNumber = Math.floor(Math.random() * 4);
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.reply(mensajesParaGuli[randomNumber]);
     }
   }
@@ -1233,7 +1233,7 @@ client.on("message", async (message) => {
     message.content.toUpperCase().includes("riber".toUpperCase()) ||
     message.content.toUpperCase().includes("river".toUpperCase())
   ) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       message.reply(
         `https://tenor.com/view/riber-fire-stadium-flame-gif-7661285`
       );
@@ -1241,7 +1241,7 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("!quienjuegahoy".toUpperCase())) {
-    if (message.author != "829051360183976046") {
+    if (message.author.id !== "829051360183976046") {
       const fechaHoy = new Date().toDateString();
 
       const buscarPartidos = fixture.filter(

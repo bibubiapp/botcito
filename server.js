@@ -1016,14 +1016,14 @@ client.on("message", async (message) => {
     message.reply("EU, LAS PALABRITAS EH");
   }
 
-  if (
-    message.content.toUpperCase().includes("lucho".toUpperCase()) ||
-    message.content.toUpperCase().includes("lucian".toUpperCase())
-  ) {
-    if (message.author != "829051360183976046") {
-      message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
-    }
-  }
+  // if (
+  //   message.content.toUpperCase().includes("lucho".toUpperCase()) ||
+  //   message.content.toUpperCase().includes("lucian".toUpperCase())
+  // ) {
+  //   if (message.author != "829051360183976046") {
+  //     message.reply("EL LUCHO DE LA PIPOL SIEMPRE PRESENTE 🕺");
+  //   }
+  // }
 
   if (message.content.toUpperCase().includes("lo rompis".toUpperCase())) {
     message.reply("SANTI NO ROMPIÓ NADA, CALMATE");
@@ -1074,11 +1074,18 @@ client.on("message", async (message) => {
   }
 
   if (message.content.toUpperCase().includes("volvio tibu".toUpperCase())) {
+    const randomNumber = Math.floor(
+      Math.random() * arrayFrasesVolvio.length + 1
+    );
+
     if (message.author != "829051360183976046") {
-      const randomNumber = Math.floor(
-        Math.random() * arrayFrasesVolvio.length + 1
+      message.reply(
+        `${
+          arrayFrasesVolvio[randomNumber]
+            ? arrayFrasesVolvio[randomNumber]
+            : "Pero cómo que volví? Yo no entiendo... si yo NUNCA ME FUÍ :shark:"
+        }`
       );
-      message.reply(arrayFrasesVolvio[randomNumber]);
     }
   }
 

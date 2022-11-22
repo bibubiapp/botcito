@@ -1049,7 +1049,22 @@ client.on("message", async (message) => {
     if (message.author != "829051360183976046") {
       //   message.reply("EL CITIOU ES LO MÁS GRANDE ❤️");
       message.reply(
-        "Hola soy Tiburoncin! El más mejor bot de todos y guardaespaldas personal de Santi 🦈 haganme caso o no aprenden CSS"
+        // "Hola soy Tiburoncin! El más mejor bot de todos y guardaespaldas personal de Santi 🦈 haganme caso o no aprenden CSS"
+        "Pidan perdón, bot hay uno sólo :shark:"
+      );
+    }
+  }
+
+  if (message.content.toUpperCase().includes("turrito".toUpperCase())) {
+    if (message.author != "829051360183976046") {
+      message.reply(
+        `No tengo competencia,
+        Y cada vez que le compito ni me tengo que esforzar.
+        
+        Y al final no caí, me volví más fuerte para la sorpresa de varios.
+
+        Mi fe a la derecha, mi grupo a la izquierda, este tiburón no hay anzuelo que muerda.        
+        `
       );
     }
   }

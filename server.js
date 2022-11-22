@@ -990,7 +990,7 @@ const arrayFrasesVolvio = [
 ];
 
 client.on("message", async (message) => {
-  if (message.author.bot) return;
+  // if (message.author.bot) return;
 
   if (
     palabrotasArray

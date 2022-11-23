@@ -989,6 +989,99 @@ const arrayFrasesVolvio = [
   `VOLVÍ! DANCEN AHORA :shark:`,
 ];
 
+const figuritas = [
+  {
+    id: 0,
+    name: "Franco Armani",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163094/16_j8moi1.png",
+  },
+  {
+    id: 1,
+    name: "Marcos Acuña",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163094/15_otn9fi.png",
+  },
+  {
+    id: 2,
+    name: "Nicolás Otamendi",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163094/13_ccctt5.png",
+  },
+  {
+    id: 3,
+    name: "Emiliano Martinez",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163094/17_xihaok.png",
+  },
+  {
+    id: 4,
+    name: "Germán Pezzella",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/12_xy0aui.png",
+  },
+  {
+    id: 5,
+    name: "Nahuel Molina",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/14_abdvyj.png",
+  },
+  {
+    id: 6,
+    name: "Rodrigo De Paul",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/10_kxchr5.png",
+  },
+  {
+    id: 7,
+    name: "Giovani Lo Celso",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/8_lzljlz.png",
+  },
+  {
+    id: 8,
+    name: "Leandro Paredes",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/7_velyfe.png",
+  },
+  {
+    id: 9,
+    name: "Guido Rodríguez",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/6_ochpqs.png",
+  },
+  {
+    id: 10,
+    name: "Lionel Messi",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163092/0_r9vcny.png",
+  },
+  {
+    id: 11,
+    name: "Cristian Romero",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/11_t2mfqd.png",
+  },
+  {
+    id: 12,
+    name: "Ángel Di María",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163093/9_unwcfw.png",
+  },
+  {
+    id: 13,
+    name: "Lautaro Martínez",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163092/1_ordf0f.png",
+  },
+  {
+    id: 14,
+    name: "Julián Álvarez",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163092/5_jsvqzs.png",
+  },
+  {
+    id: 15,
+    name: "Joaquín Correa",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163092/4_sltiy3.png",
+  },
+  {
+    id: 16,
+    name: "Alejandro Gómez",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163092/3_swo9bj.png",
+  },
+  {
+    id: 17,
+    name: "Nicolás Gonzalez",
+    src: "https://res.cloudinary.com/santiagoharkes/image/upload/v1669163092/2_it5wxw.png",
+  },
+];
+
 client.on("message", async (message) => {
   // if (message.author.id.bot) return;
 
@@ -1101,19 +1194,37 @@ client.on("message", async (message) => {
 
   if (message.content.toUpperCase().includes("santi".toUpperCase())) {
     if (message.author.id !== "829051360183976046") {
-      message.channel.send(
-        "Santi, te llaman hermano... aparecé dejá de comer Oreos"
-      );
+      const randomNumber = Math.floor(Math.random() * 100);
+
+      if (randomNumber > 50) {
+        message.channel.send(
+          "Santi, te llaman hermano... aparecé dejá de comer Oreos"
+        );
+      }
     }
   }
 
   if (message.content.toUpperCase().includes("!figurita".toUpperCase())) {
     if (message.author.id !== "829051360183976046") {
-      message.channel.send("Hola", {
-        files: [
-          "https://http2.mlstatic.com/D_NQ_NP_932084-MLA52098021314_102022-O.webp",
-        ],
-      });
+      const hours = new Date().getHours();
+      const minutes = new Date().getMinutes();
+      const randomNumber = Math.floor(Math.random() * figuritas.length);
+
+      const messi = figuritas.find((figurita) => figurita.id === 10);
+      const figuritaRandom =
+        randomNumber === 11
+          ? figuritas[randomNumber + 1]
+          : figuritas[randomNumber];
+
+      if (hours + minutes === 10) {
+        message.reply("TE TOCO A MEEEEEEESSIIIIIIIIII!", {
+          files: [messi.src],
+        });
+      } else {
+        message.reply(`Holis! Hoy te tocó a ${figuritaRandom.name}`, {
+          files: [figuritaRandom.src],
+        });
+      }
     }
   }
 

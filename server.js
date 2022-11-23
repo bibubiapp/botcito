@@ -1206,17 +1206,22 @@ client.on("message", async (message) => {
 
   if (message.content.toUpperCase().includes("!figurita".toUpperCase())) {
     if (message.author.id !== "829051360183976046") {
-      const hours = new Date().getHours();
-      const minutes = new Date().getMinutes();
+      const hours = `${new Date().getHours()}`.split("");
+      const minutes = `${new Date().getMinutes()}`.split("");
+      const sum = [...hours, ...minutes].reduce(
+        (acum, actual) => +acum + +actual
+      );
+
       const randomNumber = Math.floor(Math.random() * figuritas.length);
 
       const messi = figuritas.find((figurita) => figurita.id === 10);
+
       const figuritaRandom =
         randomNumber === 11
           ? figuritas[randomNumber + 1]
           : figuritas[randomNumber];
 
-      if (hours + minutes === 10) {
+      if (sum === 10) {
         message.reply("TE TOCO A MEEEEEEESSIIIIIIIIII!", {
           files: [messi.src],
         });

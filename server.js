@@ -1206,7 +1206,8 @@ client.on("message", async (message) => {
     if (message.author.id !== "829051360183976046") {
       const hours = `${new Date().getHours()}`.split("");
       const minutes = `${new Date().getMinutes()}`.split("");
-      const sum = [...hours, ...minutes].reduce(
+      const seconds = `${new Date().getSeconds()}`.split("");
+      const sum = [...hours, ...minutes, ...seconds].reduce(
         (acum, actual) => +acum + +actual
       );
 

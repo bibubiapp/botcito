@@ -1085,8 +1085,6 @@ const figuritas = [
 client.on("message", async (message) => {
   // if (message.author.id.bot) return;
 
-  console.log(message.author.id);
-
   if (
     palabrotasArray
       .map((palabra) =>
@@ -1211,6 +1209,8 @@ client.on("message", async (message) => {
       const sum = [...hours, ...minutes].reduce(
         (acum, actual) => +acum + +actual
       );
+
+      console.log({ sum });
 
       const randomNumber = Math.floor(Math.random() * figuritas.length);
 

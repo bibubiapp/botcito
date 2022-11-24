@@ -1262,7 +1262,7 @@ client.on("message", async (message) => {
       .setColor("#FF00A2")
       .setAuthor(
         "Adel dice:",
-        "https://pbs.twimg.com/profile_images/1468394387000410116/uj5xswRX_400x400.jpg",
+        "https://cdn.discordapp.com/avatars/184146277750145026/a5239e76bf12e3aa0eb9b346032613f1.png?size=1024",
         "https://developer.mozilla.org/es/"
       )
       .setDescription(
